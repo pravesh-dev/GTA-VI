@@ -64,7 +64,8 @@ const App = () => {
       {isContent && (
         <div className="w-full">
           <div className="landing w-full h-screen bg-black">
-            <div className="imagesdiv w-full h-screen relative">
+            <nav className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-16 bg-red-600"></nav>
+            <div className="imagesdiv w-full h-screen relative overflow-hidden">
               <img
                 className="w-full h-full object-cover absolute top-0 left-0"
                 src="./sky2.png"
@@ -76,7 +77,7 @@ const App = () => {
                 alt="background image"
               />
               <img
-                className="h-full absolute bottom-0 right-0"
+                className="h-[70%] sm:h-[90%] absolute bottom-0 right-0"
                 src="./girlbg.png"
                 alt="girl image"
               />
