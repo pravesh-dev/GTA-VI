@@ -97,11 +97,11 @@ const App = () => {
                 src="./bg2-trasparent.png"
                 alt="background image"
               />
-              {/* <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
-                <h1 className="text-3xl leading-none -ml-40">grand</h1>
-                <h1 className="text-3xl leading-none ml-20">theft</h1>
-                <h1 className="text-3xl leading-none -ml-40">auto</h1>
-              </div> */}
+              <div className="text text-white flex flex-col gap-3 absolute top-20 left-[20%] lg:left-[50%]">
+                <h1 className="text-6xl sm:text-8xl lg:text-9xl leading-none">grand</h1>
+                <h1 className="text-6xl sm:text-8xl lg:text-9xl leading-none ml-14">theft</h1>
+                <h1 className="text-6xl sm:text-8xl lg:text-9xl leading-none">auto</h1>
+              </div>
               <img
                 className="h-[70%] sm:h-[90%] absolute bottom-0 right-0"
                 src="./girlbg.png"
