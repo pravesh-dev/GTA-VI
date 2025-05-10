@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import "remixicon/fonts/remixicon.css";
+import logo from '/gta6-logo.png'
+import rockstar from '/rockstar.png'
 
 const App = () => {
   let [isContent, setIsContent] = useState(false);
@@ -29,6 +32,11 @@ const App = () => {
       },
     });
   });
+
+  useGSAP(()=> {
+    if(!isContent) return;
+
+  })
   return (
     <>
       <div className="svg flex items-center justify-center fixed top-0 left-0 z-[100] w-full h-screen overflow-hidden bg-[#000]">
@@ -62,9 +70,22 @@ const App = () => {
         </svg>
       </div>
       {isContent && (
-        <div className="w-full">
+        <div className="main w-full">
           <div className="landing w-full h-screen bg-black">
-            <nav className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-16 bg-red-600"></nav>
+            <header className="w-full py-2 px-16 flex justify-between items-center absolute top-0 left-0 z-[10] ">
+              <div className="flex gap-2 items-center">
+                <img className="w-10" src={rockstar} alt="Rockstar logo" />
+                <span className="w-[2px] h-8 bg-white/80 ml-1 rounded-full"></span>
+                <img className="w-12" src={logo} alt="GTA VI logo" />
+              </div>
+              <nav className="navbar">
+                <a href="/">People</a>
+                <a href="/">Places</a>
+                <a href="/">Trailers</a>
+                <a href="/">Downloads</a>
+              </nav>
+              <p>2026</p>
+            </header>
             <div className="imagesdiv w-full h-screen relative overflow-hidden">
               <img
                 className="w-full h-full object-cover absolute top-0 left-0"
