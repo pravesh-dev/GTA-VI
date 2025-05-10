@@ -72,19 +72,19 @@ const App = () => {
       {isContent && (
         <div className="main w-full">
           <div className="landing w-full h-screen bg-black">
-            <header className="w-full py-2 px-16 flex justify-between items-center absolute top-0 left-0 z-[10] ">
+            <header className="w-full py-4 px-16 flex justify-between items-center absolute top-0 left-0 z-[10] ">
               <div className="flex gap-2 items-center">
                 <img className="w-10" src={rockstar} alt="Rockstar logo" />
                 <span className="w-[2px] h-8 bg-white/80 ml-1 rounded-full"></span>
                 <img className="w-12" src={logo} alt="GTA VI logo" />
               </div>
-              <nav className="navbar">
-                <a href="/">People</a>
-                <a href="/">Places</a>
-                <a href="/">Trailers</a>
-                <a href="/">Downloads</a>
+              <nav className="navbar flex gap-12">
+                <a className="text-lg text-white tracking-wider capitalize" href="/">People</a>
+                <a className="text-lg text-white tracking-wider capitalize" href="/">Places</a>
+                <a className="text-lg text-white tracking-wider capitalize" href="/">Trailers</a>
+                <a className="text-lg text-white tracking-wider capitalize" href="/">Downloads</a>
               </nav>
-              <p>2026</p>
+              <p className="px-6 py-1 rounded-sm text-white text-lg border border-white">Soon in 2026</p>
             </header>
             <div className="imagesdiv w-full h-screen relative overflow-hidden">
               <img
