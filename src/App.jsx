@@ -72,19 +72,19 @@ const App = () => {
       {isContent && (
         <div className="main w-full">
           <div className="landing w-full h-screen bg-black">
-            <header className="w-full py-4 px-16 flex justify-between items-center absolute top-0 left-0 z-[10] ">
+            <header className="w-full py-4 px-4 sm:px-8 lg:px-16 flex justify-between items-center absolute top-0 left-0 z-[10] ">
               <div className="flex gap-2 items-center">
-                <img className="w-10" src={rockstar} alt="Rockstar logo" />
-                <span className="w-[2px] h-8 bg-white/80 ml-1 rounded-full"></span>
-                <img className="w-12" src={logo} alt="GTA VI logo" />
+                <img className="w-8 sm:w-10" src={rockstar} alt="Rockstar logo" />
+                <span className="w-[1.4px] sm:w-[2px] h-6 sm:h-8 bg-white/80 ml-1 rounded-full"></span>
+                <img className="w-10 sm:w-12" src={logo} alt="GTA VI logo" />
               </div>
-              <nav className="navbar flex gap-12">
-                <a className="text-lg text-white tracking-wider capitalize" href="/">People</a>
-                <a className="text-lg text-white tracking-wider capitalize" href="/">Places</a>
-                <a className="text-lg text-white tracking-wider capitalize" href="/">Trailers</a>
-                <a className="text-lg text-white tracking-wider capitalize" href="/">Downloads</a>
+              <nav className="navbar gap-5 lg:gap-12 hidden sm:flex">
+                <a className="text-sm lg:text-lg text-white tracking-wider capitalize" href="/">People</a>
+                <a className="text-sm lg:text-lg text-white tracking-wider capitalize" href="/">Places</a>
+                <a className="text-sm lg:text-lg text-white tracking-wider capitalize" href="/">Trailers</a>
+                <a className="text-sm lg:text-lg text-white tracking-wider capitalize" href="/">Downloads</a>
               </nav>
-              <p className="px-6 py-1 rounded-sm text-white text-lg border border-white">Soon in 2026</p>
+              <p className="px-6 py-1 rounded-sm text-white text-xs tracking-wide lg:text-lg border border-white">Soon in 2026</p>
             </header>
             <div className="imagesdiv w-full h-screen relative overflow-hidden">
               <img
@@ -97,6 +97,11 @@ const App = () => {
                 src="./bg2-trasparent.png"
                 alt="background image"
               />
+              {/* <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
+                <h1 className="text-3xl leading-none -ml-40">grand</h1>
+                <h1 className="text-3xl leading-none ml-20">theft</h1>
+                <h1 className="text-3xl leading-none -ml-40">auto</h1>
+              </div> */}
               <img
                 className="h-[70%] sm:h-[90%] absolute bottom-0 right-0"
                 src="./girlbg.png"
