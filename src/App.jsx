@@ -39,14 +39,18 @@ const App = () => {
 
     mainRef.current?.addEventListener('mousemove', (e)=>{
       const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
+      const yMove = (e.clientY / window.innerHeight - 0.5) * 40;
       gsap.to('.main .text', {
-        x: xMove
+        x: xMove,
+        y: yMove
       })
       gsap.to('.skyImage', {
-        x: xMove * 2
+        x: xMove * 1.2,
+        y: yMove * 1.2
       })
       gsap.to('.bgImage', {
-        x: xMove * 5
+        x: xMove * 3,
+        y: yMove * 3
       })
     })
   }, [isContent])
