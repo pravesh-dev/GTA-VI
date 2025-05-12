@@ -41,16 +41,16 @@ const App = () => {
       const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
       const yMove = (e.clientY / window.innerHeight - 0.5) * 40;
       gsap.to('.main .text', {
-        x: xMove,
-        y: yMove
+        x: xMove * 0.4,
+        y: yMove * 0.4
       })
       gsap.to('.skyImage', {
-        x: xMove * 1.2,
-        y: yMove * 1.2
+        x: xMove * 0.9,
+        y: yMove * 0.9
       })
       gsap.to('.bgImage', {
-        x: xMove * 3,
-        y: yMove * 3
+        x: xMove * 1.6,
+        y: yMove * 1.6
       })
     })
   }, [isContent])
@@ -103,7 +103,7 @@ const App = () => {
               </nav>
               <p className="px-6 py-1 rounded-sm text-white text-xs tracking-wide lg:text-lg border border-white">Soon in 2026</p>
             </header>
-            <div className="imagesdiv w-full h-screen relative overflow-hidden">
+            <div className="imagesdiv w-full h-screen relative overflow-hidden pointer-events-none">
               <img
                 className="skyImage w-full h-full object-cover absolute top-0 left-0 scale-[1.3]"
                 src="./sky2.png"
@@ -114,9 +114,9 @@ const App = () => {
                 src="./bg2-trasparent.png"
                 alt="background image"
               />
-              <div className="text text-white flex flex-col gap-3 absolute top-20 left-[20%] lg:left-[50%]">
+              <div className="text text-white flex flex-col gap-3 lg:gap-1 absolute top-20 left-[20%] lg:left-[50%] select-none">
                 <h1 className="text-6xl sm:text-8xl lg:text-9xl leading-none">grand</h1>
-                <h1 className="text-6xl sm:text-8xl lg:text-9xl leading-none ml-14">theft</h1>
+                <h1 className="text-6xl sm:text-8xl lg:text-9xl leading-none ml-14 lg:ml-28 lg:pt-5">theft</h1>
                 <h1 className="text-6xl sm:text-8xl lg:text-9xl leading-none">auto</h1>
               </div>
               <img
