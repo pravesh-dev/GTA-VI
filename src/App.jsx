@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "remixicon/fonts/remixicon.css";
@@ -7,6 +7,7 @@ import rockstar from '/rockstar.png'
 
 const App = () => {
   let [isContent, setIsContent] = useState(false);
+  let mainRef = useRef(null)
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -36,7 +37,19 @@ const App = () => {
   useGSAP(()=> {
     if(!isContent) return;
 
-  })
+    mainRef.current?.addEventListener('mousemove', (e)=>{
+      const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
+      gsap.to('.main .text', {
+        x: xMove
+      })
+      gsap.to('.skyImage', {
+        x: xMove * 2
+      })
+      gsap.to('.bgImage', {
+        x: xMove * 5
+      })
+    })
+  }, [isContent])
   return (
     <>
       <div className="svg flex items-center justify-center fixed top-0 left-0 z-[100] w-full h-screen overflow-hidden bg-[#000]">
@@ -70,7 +83,7 @@ const App = () => {
         </svg>
       </div>
       {isContent && (
-        <div className="main w-full">
+        <div ref={mainRef} className="main w-full">
           <div className="landing w-full h-screen bg-black">
             <header className="w-full py-4 px-4 sm:px-8 lg:px-16 flex justify-between items-center absolute top-0 left-0 z-[10] ">
               <div className="flex gap-2 items-center">
@@ -88,12 +101,12 @@ const App = () => {
             </header>
             <div className="imagesdiv w-full h-screen relative overflow-hidden">
               <img
-                className="w-full h-full object-cover absolute top-0 left-0"
+                className="skyImage w-full h-full object-cover absolute top-0 left-0 scale-[1.3]"
                 src="./sky2.png"
                 alt="sky image"
               />
               <img
-                className="w-full h-full object-cover absolute top-0 left-0"
+                className="bgImage w-full h-full object-cover absolute top-0 left-0 scale-[1.3]"
                 src="./bg2-trasparent.png"
                 alt="background image"
               />
