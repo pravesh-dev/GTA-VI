@@ -45,6 +45,16 @@ const App = () => {
       ease: "Expo.easeInOut",
     });
 
+    gsap.from(".skyImage", {
+      scale: 1.5,
+      rotate: '-20deg',
+      duration: 2,
+      delay: "-.8",
+      ease: "Expo.easeInOut",
+    });
+
+    
+
 
     mainRef.current?.addEventListener('mousemove', (e)=>{
       const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
