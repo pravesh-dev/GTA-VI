@@ -61,7 +61,15 @@ const App = () => {
       ease: "Expo.easeInOut",
     });
 
-    
+    gsap.from(".character", {
+      scale: 3,
+      x: "-50%",
+      bottom: "100%",
+      rotate: '-20deg',
+      duration: 2,
+      delay: "-.8",
+      ease: "Expo.easeInOut",
+    });
 
 
     mainRef.current?.addEventListener('mousemove', (e)=>{
