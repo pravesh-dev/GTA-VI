@@ -71,6 +71,13 @@ const App = () => {
       ease: "Expo.easeInOut",
     });
 
+    gsap.from(".text", {
+      scale: 1.4,
+      rotate: '-10deg',
+      duration: 2,
+      delay: "-.8",
+      ease: "Expo.easeInOut",
+    });
 
     mainRef.current?.addEventListener('mousemove', (e)=>{
       const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
