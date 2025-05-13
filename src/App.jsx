@@ -53,6 +53,14 @@ const App = () => {
       ease: "Expo.easeInOut",
     });
 
+    gsap.from(".bgImage", {
+      scale: 1.8,
+      rotate: '-3deg',
+      duration: 2,
+      delay: "-.8",
+      ease: "Expo.easeInOut",
+    });
+
     
 
 
