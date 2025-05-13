@@ -37,6 +37,15 @@ const App = () => {
   useGSAP(()=> {
     if(!isContent) return;
 
+    gsap.from(".main", {
+      scale: 1.7,
+      rotate: '-10deg',
+      duration: 2,
+      delay: "-1",
+      ease: "Expo.easeInOut",
+    });
+
+
     mainRef.current?.addEventListener('mousemove', (e)=>{
       const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
       const yMove = (e.clientY / window.innerHeight - 0.5) * 40;
@@ -120,7 +129,7 @@ const App = () => {
                 <h1 className="text-6xl sm:text-8xl lg:text-9xl leading-none">auto</h1>
               </div>
               <img
-                className="h-[70%] sm:h-[90%] absolute bottom-0 right-0"
+                className="character h-[70%] sm:h-[90%] absolute bottom-0 right-0"
                 src="./girlbg.png"
                 alt="girl image"
               />
