@@ -82,22 +82,22 @@ const App = () => {
     mainRef.current?.addEventListener('mousemove', (e)=>{
       const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
       const yMove = (e.clientY / window.innerHeight - 0.5) * 40;
-      gsap.to('.main .text', {
+      gsap.to('.imagesdiv .text', {
+        x: xMove * 1.9,
+        y: yMove * 1.9
+      })
+      gsap.to('.skyImage', {
         x: xMove * 0.4,
         y: yMove * 0.4
       })
-      gsap.to('.skyImage', {
-        x: xMove * 0.9,
-        y: yMove * 0.9
-      })
       gsap.to('.bgImage', {
-        x: xMove * 1.6,
-        y: yMove * 1.6
+        x: xMove * 1,
+        y: yMove * 1
       })
     })
   }, [isContent])
   return (
-    <>
+    <div className="overflow-hidden">
       <div className="svg flex items-center justify-center fixed top-0 left-0 z-[100] w-full h-screen overflow-hidden bg-[#000]">
         <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
           <defs>
@@ -183,7 +183,7 @@ const App = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
